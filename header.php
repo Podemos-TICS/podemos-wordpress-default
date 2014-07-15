@@ -180,7 +180,7 @@
 
                                     else {                                       
 
-									    echo '<img src="wp-content/themes/podemos/assets/podemos-logo.png" class="img-responsive" alt="'.get_bloginfo( 'name' ).'">';
+									    echo '<img src="'.get_template_directory_uri().'/assets/podemos-logo.png" class="img-responsive" alt="'.get_bloginfo( 'name' ).'">';
 
 									} 
 
