@@ -24,7 +24,7 @@ Features
 Screenshots & Demo
 ******************
 
-You can find Screenshots and a Demo on: http://www.besserdich.com/wordpress/twitter-bootstrap-3-blank-theme-fuer-wordpress/ 
+You can find Screenshots and a Demo on: http://themes.webdesign4pro.com
 
 
  
