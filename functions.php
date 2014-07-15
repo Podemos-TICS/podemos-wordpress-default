@@ -1521,3 +1521,11 @@ function podemos_register_required_plugins() {
 
 
 }
+
+
+//Initialize the update checker.
+require 'theme-updates/theme-update-checker.php';
+$example_update_checker = new ThemeUpdateChecker(
+    'podemos-wordpress-default-master',
+    'http://info.pinternet.es/actualizacionespodemos/wp-podemos.json'
+);
