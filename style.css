@@ -344,11 +344,13 @@ ul.nav li.dropdown:hover ul.dropdown-menu{ display: block; margin-top:-2px;}
 
 	left: 0;
 
-	padding: 0 15px;
+	padding: 0 5px;
 
 	background: #282B33 url(assets/circulo-podemos.png) top left no-repeat;
-
-	padding-left: 25px;
+    
+    background-origin:content-box;	
+	
+	padding-left: 5px;
 
 }
 
@@ -991,12 +993,18 @@ code {
 }
 
 
+.textocabecera {
+margin-left:45px;
+}
 
-
+.container {
+padding-right:0px!important;
+padding-left:0px!important;
+}
 
 .row .footer { margin:0px 0px 0px 0px !important; padding: 0px 0px 0px 0px !important; height:100% !important;}
 
-
+.row {margin-left:0px!important; margin-right:0px!important;}
 
 .footer .col-md-3  { padding: 20px 20px 20px 40px !important; margin: 0px 0px 0px 0px !important;}
 

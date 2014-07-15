@@ -96,7 +96,7 @@
           <div id="top-header">
 
               <div class="container">            
-
+                <div class="textocabecera">
                  <?php                
 
                     $options = get_option('podemoswp_theme_options');
@@ -108,6 +108,7 @@
                     }
 
                  ?>
+				 </div>
 
 <?php
 
