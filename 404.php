@@ -14,21 +14,7 @@
          
          
          
-     <div class="row">
-         
-        <div class="col-md-12">
-            
-            <?php
-            if (function_exists('bootstrapwp_breadcrumbs')) {
-                
-                bootstrapwp_breadcrumbs();
-                
-            }
-            ?>
-            
-        </div><!--/.col -->
-         
-    </div><!--/.row -->
+
     
     
     
@@ -36,15 +22,7 @@
     
     <div class="row main-top">
         
-        <div class="col-lg-9 col-md-9 col-sm-9 col-9">
-
-            <header>
-                       
-                <h1><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
-            
-            </header>
-
-        </div><!--/.col -->
+        
   
     </div><!--/.row -->
     

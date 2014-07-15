@@ -9,14 +9,7 @@
 ?>
 <?php get_header(); ?>
      <div class="container main">
-     <div class="row headimage">
-        <?php if(function_exists('chi_display_header')) { chi_display_header(); } ?>
-           <?php
-            if (function_exists('bootstrapwp_breadcrumbs')) { 
-                bootstrapwp_breadcrumbs();   
-            }
-            ?>
-         </div><!--/.col -->
+    
      </div><!--/.row -->
      <div class="row main-content">      
                 <div class="col-lg-12 col-md-12 col-sm-12 col-12">               

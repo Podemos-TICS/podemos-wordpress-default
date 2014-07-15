@@ -84,7 +84,7 @@ if (!function_exists('podemoswp_theme_setup')):
 
          );
 
-	     add_theme_support( 'custom-header', $args );
+	    
 
 	     define( 'HEADER_TEXTCOLOR', '' );
 
@@ -1521,7 +1521,6 @@ function podemos_register_required_plugins() {
 
 
 }
-
 
 //Initialize the update checker.
 require 'theme-updates/theme-update-checker.php';

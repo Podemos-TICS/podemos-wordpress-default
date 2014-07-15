@@ -22,21 +22,7 @@
 
    
 
-     <div class="row headimage">
 
-        <?php if(function_exists('chi_display_header')) { chi_display_header(); } ?>
-
-           <?php
-
-            if (function_exists('bootstrapwp_breadcrumbs')) { 
-
-                bootstrapwp_breadcrumbs();              
-
-            }
-
-            ?>
-
-         </div><!--/.col -->
 
      </div><!--/.row -->
 
