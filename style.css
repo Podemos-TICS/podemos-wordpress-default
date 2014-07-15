@@ -30,33 +30,19 @@
 
 @import url(http://fonts.googleapis.com/css?family=Anaheim);
 
-
-
 @font-face {
-
   font-family: 'Alegreya Sans SC';
-
   font-style: normal;
-
   font-weight: 400;
-
-  src: local('Alegreya Sans SC'), local('AlegreyaSansSC-Regular'), url(http://themes.googleusercontent.com/static/fonts/alegreyasanssc/v1/6kgb6ZvOagoVIRZyl8XV-GO_i8BOEjpKgXmWslRQ9I8.woff) format('woff');
-
+  src: local('Alegreya Sans SC'), local('AlegreyaSansSC-Regular'), url(http://fonts.gstatic.com/s/alegreyasanssc/v2/6kgb6ZvOagoVIRZyl8XV-KisNWI8qEu_hw_BXmaMF84.woff) format('woff');
 }
-
-
-
 @font-face {
-
   font-family: 'Anaheim';
-
   font-style: normal;
-
   font-weight: 400;
-
-  src: local('Anaheim'), local('Anaheim-Regular'), url(http://fonts.gstatic.com/s/anaheim/v3/ih4p6L2bXQbInUkJnAHUUQLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
-
+  src: local('Anaheim'), local('Anaheim-Regular'), url(http://fonts.gstatic.com/s/anaheim/v3/9grF9iDBrnUvUAGLpfiBHQ.woff) format('woff');
 }
+
 
 
 
