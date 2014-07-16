@@ -30,7 +30,7 @@
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-     <div class="row main-content">
+     <div class="row main-content rightsid">
 
                 <div class="col-lg-9 col-md-9 col-sm-9 col-9">     
 

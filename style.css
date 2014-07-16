@@ -2,7 +2,7 @@
  * Theme Name: podemos-wordpress-default-master
  * Theme URI: http://webdesign4pros.com
  * Theme Description: Template para Podemos
- * Author: Gregor Hartmaier (Webdesign4Pros)
+ * Author: Gregor Hartmaier (Webdesign4Pros), David Varela (Lycaweb) 
  * Author URI: http://webdesign4pros.com/
  * Version: 1.22
  * Tags: twitter, bootstrap, podemos, círculos
@@ -219,6 +219,9 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
 }
 
 
+
+
+
 /* Sidebars */ 
 
 .sidebar-posts .textwidget, .sidebar-page .textwidget {
@@ -235,6 +238,10 @@ min-height:500px!important;
 
 /* Contradiciendo Bootstrap Responsive */ 
 
+div.top-main-menu.fixed {
+position:relative!important;
+}
+
 @media (min-width: 1200px) {
 
 
@@ -247,6 +254,7 @@ width: 33%;
 }
 
 }
+
 
 @media (min-width: 992px) {
 
@@ -278,7 +286,24 @@ width: 67%;
 
 }
 
+@media (max-width: 1124px) {
+
+.portada_top { 
+height:auto!important;
+}
+
+.portada_presentation {
+
+width:100%!important;
+height:auto!important;
+}
+
+}
+
 @media (max-width: 992px) {
+
+
+
 
 .sidebar-wrapper ul {
 padding-left: 0px!important;
@@ -315,12 +340,7 @@ width: 100%;
 
 }
 
-/* Fondo de página */ 
 
-div.main-content {
-background:#fff;
-background-color:#fff;
-}
 
 /* Top Header */ 
 

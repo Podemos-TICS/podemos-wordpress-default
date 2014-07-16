@@ -109,6 +109,8 @@
 
                  ?>
 				 </div>
+				 
+				  <?php get_template_part('css'); ?>
 
 <?php
 

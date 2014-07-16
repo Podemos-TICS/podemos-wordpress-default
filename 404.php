@@ -10,86 +10,46 @@
 
 
      <div class="container main">
-         
-         
-         
-         
-
-    
-    
-    
-    
+          
     
     <div class="row main-top">
         
         
   
     </div><!--/.row -->
-    
-    
+      
     
      <div class="row main-content">
          
-                <div class="col-lg-9 col-md-9 col-sm-9 col-9">
+                <div class="col-lg-9 col-md-9 col-sm-9 col-9 aparece">
                     
-                    <div class="content main">
-
-                   <header class="page-title">
-                                        <h1><?php _e('This is Embarrassing', 'podemoswp'); ?></h1>
-                                    </header>
-
-                                    <p class="lead"><?php _e(
-                                        'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help.',
-                                        'podemoswp'
-                                    ); ?></p>
-
-                                   <div class="well">
-                                       <?php get_search_form(); ?>
-                                   </div>
-                                    
-                                    
-                                    
-                                     <h2><?php _e('All Pages', 'podemoswp'); ?></h2>
-                   <?php wp_page_menu(); ?>
-                                     
-                                      <?php the_widget('WP_Widget_Recent_Posts'); ?>
-
-                   <h2><?php _e('Categories', 'podemoswp'); ?></h2>
-                   <ul>
-                       <?php wp_list_categories(
-                       array(
-                           'orderby' => 'count',
-                           'order' => 'DESC',
-                           'show_count' => 1,
-                           'title_li' => '',
-                           'number' => 100
-                       )
-                   ); ?>
-                   </ul>
-
-                    </div> <!-- /.content -->
+                 <?php get_template_part('404main');  ?>  
                     
                 </div> <!-- /.col -->
            
-
-          
-           
+         
         <div class="col-lg-3 col-md-3 col-sm-3 col-3 sidebar-wrapper"> 
             
             <?php get_sidebar('page'); ?>
 
         </div><!--/.col -->
+		
+		
+		  <div class="col-lg-9 col-md-9 col-sm-9 col-9 desaparece">
+                    
+                 <?php get_template_part('404main');  ?>  
+                    
+                </div> <!-- /.col -->
     
      </div> <!--/.row -->
         
         
         
         
-         
         
     </div><!-- container -->
     
     
     
     
-<?php get_footer(); ?>
+<?php get_footer('left-sidebar'); ?>
