@@ -20,7 +20,7 @@ background: url(http://info.pinternet.es/wp-content/themes/podemos-wordpress-def
 /* Div Portada */
 
 .portada_top {
-height: 450px;
+height: 500px;
 width: 100%;
 overflow: hidden;
 position: relative;
@@ -35,11 +35,11 @@ background-size: cover;
 .portada_presentation {
 overflow: hidden;
 position: relative;
-width: 33%;
+width: 37%;
 left: 0px;
 top: 0px;
 background: url(<?php echo get_template_directory_uri();?>/assets/fondo-c.png);
-height: 450px;
+height: 500px;
 }
 
 .portada_box {
