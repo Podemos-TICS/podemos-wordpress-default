@@ -34,6 +34,29 @@ add_action( 'customize_register', 'podemos_customize_register' );
 function podemos_theme_customizer( $wp_customize ) {
 
 
+
+
+//Home type
+
+ $wp_customize->add_setting(
+    'blog_info', array (
+	'default'        => 'blog',
+	));
+
+ $wp_customize->add_control('blog_info', array(
+        'label'      => __('Home type', 'podemoswp'),
+        'section'    => 'podemos_portada_section',
+        'settings'   => 'blog_info',
+		
+		'priority'    => 10,
+        'type'       => 'radio',
+        'choices'    => array(
+            'blog' => 'Blog',
+            'info' => 'Info',
+            
+        ),
+    ));
+
 //Activar Portada
 
 
@@ -52,21 +75,77 @@ $wp_customize->add_setting(
 );
 
 
+//Activar Homebox
 
 
+
+$wp_customize->add_setting(
+    'activar_homebox'
+	);
+	$wp_customize->add_control(
+    'activar_homebox',
+    array(
+        'type' => 'checkbox',
+        'label' => 'Activar Homebox',
+        'section' => 'podemos_portada_section',
+		'priority'    => 20,
+    )
+);
+
+
+
+//Homebox1 type
+
+ $wp_customize->add_setting(
+    'box1_type', array (
+	'default'        => 'video',
+	));
+
+ $wp_customize->add_control('box1_type', array(
+        'label'      => __('Homebox1 type', 'podemoswp'),
+        'section'    => 'podemos_portada_section',
+        'settings'   => 'box1_type',
+		
+		'priority'    => 21,
+        'type'       => 'radio',
+        'choices'    => array(
+            'video' => 'Video',
+            'texto' => 'Texto',
+            
+        ),
+    ));
+
+
+	
+//Activar link en homebox1
+
+
+$wp_customize->add_setting(
+    'activar_link_homebox1'
+	);
+	$wp_customize->add_control(
+    'activar_link_homebox1',
+    array(
+        'type' => 'checkbox',
+        'label' => 'Link en homebox1',
+        'section' => 'podemos_portada_section',
+		'priority'    => 30,
+    )
+);
+	
 
 
 //Imagen Portada
 
     $wp_customize->add_section( 'podemos_portada_section' , array(
-    'title'       => __( 'P&aacute;gina principal', 'podemos' ),
+    'title'       => __( 'P&aacute;gina principal', 'podemoswp' ),
     'priority'    => 31,
     'description' => 'Configura la p&aacute;gina principal',
 ));
 
 $wp_customize->add_setting( 'portada_podemos' );
 $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'portada_podemos', array(
-    'label'    => __( 'Sube una imagen a la portada', 'podemos' ),
+    'label'    => __( 'Sube una imagen a la portada', 'podemoswp' ),
     'section'  => 'podemos_portada_section',
 	'priority'    => 2,
     'settings' => 'portada_podemos',
@@ -87,6 +166,228 @@ class Podemos_Textarea_Control extends WP_Customize_Control {
 
 <?php } } 
 
+
+//Homebox1 video URL
+
+$wp_customize->add_setting(
+    'home_video_url'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'home_video_url', array(
+	'label' => 'Youtube video ID',
+	'section' => 'podemos_portada_section',
+	'priority'    => 22,
+	'settings' => 'home_video_url',
+)));
+
+//Título Texto Homebox1
+
+$wp_customize->add_setting(
+    'box1_title'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'box1_title', array(
+	'label' => 'T&iacute;tulo homebox1',
+	'section' => 'podemos_portada_section',
+	'priority'    => 23,
+	'settings' => 'box1_title',
+)));
+
+//Texto link homebox1
+
+$wp_customize->add_setting(
+    'box1_text_link'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'box1_text_link', array(
+	'label' => 'Texto link homebox1',
+	'section' => 'podemos_portada_section',
+	'priority'    => 31,
+	'settings' => 'box1_text_link',
+)));
+
+
+//URL link homebox1
+
+$wp_customize->add_setting(
+    'box1_url_link'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'box1_url_link', array(
+	'label' => 'URL link homebox1',
+	'section' => 'podemos_portada_section',
+	'priority'    => 32,
+	'settings' => 'box1_url_link',
+)));
+
+//Título homebox2
+
+$wp_customize->add_setting(
+    'box2_title'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'box2_title', array(
+	'label' => 'Título homebox2',
+	'section' => 'podemos_portada_section',
+	'priority'    => 40,
+	'settings' => 'box2_title',
+)));
+
+//Título homebox3
+
+$wp_customize->add_setting(
+    'box3_title'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'box3_title', array(
+	'label' => 'Título homebox3',
+	'section' => 'podemos_portada_section',
+	'priority'    => 50,
+	'settings' => 'box3_title',
+)));
+
+//Título homebox4
+
+$wp_customize->add_setting(
+    'box4_title'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'box4_title', array(
+	'label' => 'Título homebox4',
+	'section' => 'podemos_portada_section',
+	'priority'    => 60,
+	'settings' => 'box4_title',
+)));
+
+
+//Texto link homebox2
+
+$wp_customize->add_setting(
+    'box2_text_link'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'box2_text_link', array(
+	'label' => 'Texto link homebox2',
+	'section' => 'podemos_portada_section',
+	'priority'    => 45,
+	'settings' => 'box2_text_link',
+)));
+
+
+//Texto link homebox3
+
+$wp_customize->add_setting(
+    'box3_text_link'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'box3_text_link', array(
+	'label' => 'Texto link homebox3',
+	'section' => 'podemos_portada_section',
+	'priority'    => 55,
+	'settings' => 'box3_text_link',
+)));
+
+//Texto link homebox4
+
+$wp_customize->add_setting(
+    'box4_text_link'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'box4_text_link', array(
+	'label' => 'Texto link homebox4',
+	'section' => 'podemos_portada_section',
+	'priority'    => 65,
+	'settings' => 'box4_text_link',
+)));
+
+
+//Texto link homebox5
+
+$wp_customize->add_setting(
+    'box5_text_link'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'box5_text_link', array(
+	'label' => 'Título Anuncio',
+	'section' => 'podemos_portada_section',
+	'priority'    => 80,
+	'settings' => 'box5_text_link',
+)));
+
+
+//Info Sidebar Title
+
+$wp_customize->add_setting(
+    'info_side_title'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'info_side_title', array(
+	'label' => 'Info Sidebar Title',
+	'section' => 'podemos_portada_section',
+	'priority'    => 100,
+	'settings' => 'info_side_title',
+)));
+
+//Info Content Title
+
+$wp_customize->add_setting(
+    'info_content_title'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'info_content_title', array(
+	'label' => 'Info Content Title',
+	'section' => 'podemos_portada_section',
+	'priority'    => 101,
+	'settings' => 'info_content_title',
+)));
+
+//Letra pequeña homebox5
+
+$wp_customize->add_setting(
+    'box5_text'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'box5_text', array(
+	'label' => 'Texto Anuncio',
+	'section' => 'podemos_portada_section',
+	'priority'    => 83,
+	'settings' => 'box5_text',
+)));
+
+
+//URL link homebox2
+
+$wp_customize->add_setting(
+    'box2_url_link'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'box2_url_link', array(
+	'label' => 'URL link homebox2',
+	'section' => 'podemos_portada_section',
+	'priority'    => 46,
+	'settings' => 'box2_url_link',
+)));
+
+//URL link homebox3
+
+$wp_customize->add_setting(
+    'box3_url_link'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'box3_url_link', array(
+	'label' => 'URL link homebox3',
+	'section' => 'podemos_portada_section',
+	'priority'    => 56,
+	'settings' => 'box3_url_link',
+)));
+
+//URL link homebox4
+
+$wp_customize->add_setting(
+    'box4_url_link'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'box4_url_link', array(
+	'label' => 'URL link homebox4',
+	'section' => 'podemos_portada_section',
+	'priority'    => 66,
+	'settings' => 'box4_url_link',
+)));
+
+//URL link homebox5
+
+$wp_customize->add_setting(
+    'box5_url_link'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'box5_url_link', array(
+	'label' => 'URL Anuncio',
+	'section' => 'podemos_portada_section',
+	'priority'    => 81,
+	'settings' => 'box5_url_link',
+)));
 
 //Título Portada
 
@@ -144,6 +445,55 @@ $wp_customize->add_control(new Gran_Textarea_Control($wp_customize, 'texto_de_po
 	'settings' => 'texto_de_portada',
 )));
 
+//Texto Homebox1
+
+$wp_customize->add_setting(
+    'box1_text'
+	);
+$wp_customize->add_control(new Gran_Textarea_Control($wp_customize, 'box1_text', array(
+	'label' => 'Texto homebox1',
+	'section' => 'podemos_portada_section',
+	'priority'    => 24,
+	'settings' => 'box1_text',
+)));
+
+
+//Texto Homebox2
+
+$wp_customize->add_setting(
+    'box2_text'
+	);
+$wp_customize->add_control(new Gran_Textarea_Control($wp_customize, 'box2_text', array(
+	'label' => 'Texto homebox2',
+	'section' => 'podemos_portada_section',
+	'priority'    => 41,
+	'settings' => 'box2_text',
+)));
+
+//Texto Homebox3
+
+$wp_customize->add_setting(
+    'box3_text'
+	);
+$wp_customize->add_control(new Gran_Textarea_Control($wp_customize, 'box3_text', array(
+	'label' => 'Texto homebox3',
+	'section' => 'podemos_portada_section',
+	'priority'    => 51,
+	'settings' => 'box3_text',
+)));
+
+
+//Texto Homebox4
+
+$wp_customize->add_setting(
+    'box4_text'
+	);
+$wp_customize->add_control(new Gran_Textarea_Control($wp_customize, 'box4_text', array(
+	'label' => 'Texto homebox4',
+	'section' => 'podemos_portada_section',
+	'priority'    => 61,
+	'settings' => 'box4_text',
+)));
 
 
 

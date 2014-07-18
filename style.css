@@ -2,9 +2,9 @@
  * Theme Name: podemos-wordpress-default-master
  * Theme URI: http://webdesign4pros.com
  * Theme Description: Template para Podemos
- * Author: Gregor Hartmaier (Webdesign4Pros)
+ * Author: Gregor Hartmaier (Webdesign4Pros), David Varela (Lycaweb)
  * Author URI: http://webdesign4pros.com/
- * Version: 1.24
+ * Version: 1.30
  * Tags: twitter, bootstrap, podemos, círculos
  * License: license.txt
  * License URI:
@@ -219,7 +219,195 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
 }
 
 
+/* Content Info */ 
 
+
+div.sidebar-wrapper.homebox1, div.col-3.sidebar-wrapper.homebox1 {
+min-height:440px!important;
+background: #DCDCDC!important;
+}
+
+.homebox1 {
+background: #DCDCDC!important;
+height: 440px!important;
+padding: 20px 0px 0px 0px!important;
+}
+
+.homebox1 p {
+padding-left:0px!important;
+}
+
+.homeboxlinkcont {
+width:100%;
+text-align:center;
+margin-top:20px;
+position:absolute;
+bottom:20px;
+}
+
+ a.homebox_link {
+-webkit-border-radius: 2px;
+border-radius: 2px;
+-moz-border-radius: 2px;
+padding:0px 20px;
+border:0px solid #fff;
+background: #c2d9d3;
+font: 1.8em/1.944em "Alegreya Sans SC", Arial, Helvetica, sans-serif;
+color: #60676F;
+min-width:200px;
+text-transform: lowercase;
+font-size:18px!important;
+position: absolute;
+bottom: 20px;
+right: 40px;
+left: 40px;
+
+
+}
+
+.boxcont {
+padding:0px 40px;
+}
+
+
+.homebox2 {
+background: #EAEAEA!important;
+width:33.3333%;
+padding: 20px 0px!important;
+height: 365px;
+position: relative;
+float:left;
+
+}
+
+.homebox2 p {
+font-weight:normal!important;
+}
+
+.homebox3 {
+background: #FAFAFA!important;
+width:33.3333%;
+padding: 20px 0px!important;
+height: 365px;
+position: relative;
+float:left;
+}
+
+.homebox4 {
+background: #EAEAEA!important;
+width:33.3333%;
+padding: 20px 0px!important;
+height: 365px;
+position: relative;
+float:left;
+}
+
+
+.homebox5 {
+
+width:100%;
+padding: 10px;
+height: 75px!important;
+position: relative;
+float:left;
+}
+
+
+
+
+div.homebox5  a {
+font: 2em/1em "Alegreya Sans SC", Arial, Helvetica, sans-serif;
+padding: 0px!important;
+margin: 10px 10px 0px 60px;
+text-transform:uppercase!important;
+color:#fff!important;
+font-size:20px!important;
+font-weight:100!important;
+float:left;
+
+}
+
+.cabcont {
+width:100%;
+float:left;
+}
+
+div.homebox5  p {
+font: 2em/1em "Alegreya Sans SC", Arial, Helvetica, sans-serif;
+padding: 0px!important;
+margin: 0px 10px 10px 60px;
+text-transform:none!important;
+color:#fff!important;
+font-size:16px!important;
+font-weight:100!important;
+float:left!important;
+
+}
+
+.homebox6 {
+background: #fff !important;
+width:33%;
+padding: 0px!important ;
+display: block;
+position: relative;
+float:left;
+}
+
+.sidespacing {
+margin:0px 30px 30px 30px;
+
+}
+
+.contentspacing {
+margin:30px;
+
+}
+
+.homebox6 h2 {
+ float:left;
+display: block;
+background: #624E62;
+color: #FAFAFA;
+padding: 11px 0 4px 40px;
+font: 2.7em/1.5em 'FuturaStdCondensed', Arial, Helvetica, sans-serif;
+width: 100%;
+margin-top:0px;
+margin-left:0px;
+letter-spacing: 0.1em;
+font-weight: normal;
+text-transform: uppercase;
+}
+
+.homecolor{
+background:#f2f2f2;
+width:100%;
+float:left;
+}
+.homebox6 h2, .homebox7 h2 {
+font-size:28px!important;
+}
+
+.homebox7 {
+width:67%;
+float:left;
+display: block;
+background:#f2f2f2;
+padding:0px!important;
+
+}
+
+.homebox7 h2 {
+margin-top:0px;
+margin-left:0px;
+text-transform: uppercase;
+display: block;
+background: #A0A4A9;
+color: #FFF;
+padding: 11px 0 4px 40px;
+font: 2.7em/1.5em 'FuturaStdCondensed', Arial, Helvetica, sans-serif;
+letter-spacing: 0.1em;
+font-weight: normal;
+}
 
 
 /* Sidebars */ 
@@ -241,6 +429,20 @@ min-height:500px!important;
 div.top-main-menu.fixed {
 position:relative!important;
 }
+
+@media (max-width: 1268px) { 
+
+.boxcont {
+padding: 0px 20px;
+}
+
+a.homebox_link {
+right:20px;
+left:20px;
+}
+
+}
+
 
 @media (min-width: 1200px) {
 
@@ -288,6 +490,10 @@ width: 67%;
 
 @media (max-width: 1124px) {
 
+.seesfuma {
+display:none!important;
+}
+
 .portada_top { 
 height:auto!important;
 }
@@ -298,12 +504,40 @@ width:100%!important;
 height:auto!important;
 }
 
+
+div.homebox1 {
+min-height:auto!important;
+width:100%!important;
+}
+
+div.col-9.entire {
+min-height:auto!important;
+width:100%!important;
+height:auto!important;
+}
+
+
+
+
+
+
 }
 
 @media (max-width: 992px) {
 
 
+.homeboxlinkcont, a.homebox_link {
+position:relative!important;
+bottom:0px!important;
+right:0!important;
+left:0!important;
+}
 
+div.homebox2, div.homebox3, div.homebox4, div.homebox6, div.homebox7 {
+min-height:auto!important;
+width:100%!important;
+height:auto!important;
+}
 
 .sidebar-wrapper ul {
 padding-left: 0px!important;

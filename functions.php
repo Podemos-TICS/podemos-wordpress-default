@@ -252,6 +252,74 @@ add_filter('gallery_style', create_function('$a', 'return "<div class=\'gallery\
 
 function bootstrapwp_widgets_init() {
 
+
+
+    register_sidebar(
+
+            array(
+
+                'name' => __('Home/Blog Sidebar', 'podemoswp'),
+
+                'id' => 'sidebar-home',
+
+                'before_widget' => '<aside><div id="%1$s" class="widget %2$s">',
+
+                'after_widget' => "</div></aside>",
+
+                'before_title' => '<h4 class="widget-title">',
+
+                'after_title' => '</h4>',
+
+            )
+
+    );
+	
+	
+	 register_sidebar(
+
+            array(
+
+                'name' => __('Home/Info Sidebar', 'podemoswp'),
+
+                'id' => 'sidebar-info',
+
+                'before_widget' => '<aside><div id="%1$s" class="widget %2$s">',
+
+                'after_widget' => "</div></aside>",
+
+                'before_title' => '<h4 class="widget-title">',
+
+                'after_title' => '</h4>',
+
+            )
+
+    );
+	
+	
+		 register_sidebar(
+
+            array(
+
+                'name' => __('Home/Info Content', 'podemoswp'),
+
+                'id' => 'sidebar-info-content',
+
+                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+
+                'after_widget' => "</div>",
+
+                'before_title' => '<h4 class="widget-title">',
+
+                'after_title' => '</h4>',
+
+            )
+
+    );
+
+
+
+
+
     register_sidebar(
 
             array(

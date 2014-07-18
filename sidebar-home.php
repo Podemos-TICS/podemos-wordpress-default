@@ -7,27 +7,9 @@
  * @subpackage Podemos Wordpress Theme
  */
 ?>
-<div class="row">
-    <div class="col-lg-4">
-        
-        <?php
-        if (function_exists('dynamic_sidebar')) {
-            dynamic_sidebar("home-left");
-        }
-        ?>
-    </div>
-    <div class="col-lg-4">
-        <?php
-        if (function_exists('dynamic_sidebar')) {
-            dynamic_sidebar("home-middle");
-        }
-        ?>
-    </div>
-    <div class="col-lg-4">
-        <?php
-        if (function_exists('dynamic_sidebar')) {
-            dynamic_sidebar("home-right");
-        }
-        ?>
-    </div>
-</div>
+<section class="sidebar-page">
+    <?php
+    if (function_exists('dynamic_sidebar')) {   
+        dynamic_sidebar("sidebar-home");     
+    }?>
+</section>

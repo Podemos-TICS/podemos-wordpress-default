@@ -17,10 +17,17 @@ background: url(http://info.pinternet.es/wp-content/themes/podemos-wordpress-def
 }
 
 
+/* Icono Podemos Homebox5 */
+
+div.homebox5 {
+background: #97c2b8 url(<?php echo get_template_directory_uri();?>/assets/circulos_icono.png) no-repeat left center !important;
+
+}
+
 /* Div Portada */
 
 .portada_top {
-height: 500px;
+height: 450px;
 width: 100%;
 overflow: hidden;
 position: relative;
@@ -39,7 +46,7 @@ width: 37%;
 left: 0px;
 top: 0px;
 background: url(<?php echo get_template_directory_uri();?>/assets/fondo-c.png);
-height: 500px;
+height: 450px;
 }
 
 .portada_box {
