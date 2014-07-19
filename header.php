@@ -108,22 +108,23 @@
                     }
 
                  ?>
+				 
+				  
 				 </div>
 				 
+				 <?php if( get_theme_mod( 'activar_sociales' ) == '1') : ?>	
+				  <div class="redes-sociales">
+				  <a href="<?php echo get_theme_mod( 'social_facebook_url' ); ?>" target="_blank" ><img src="<?php echo get_template_directory_uri();?>/assets/fpng.png"> </a>
+				  <a href="<?php echo get_theme_mod( 'social_twitter_url' ); ?>" target="_blank" ><img src="<?php echo get_template_directory_uri();?>/assets/tpng.png"> </a>	  
+				  </div>
+				 <?php endif ; ?>
+				  
 				  <?php get_template_part('css'); ?>
 
-<?php
-
-        if (function_exists('dynamic_sidebar')) {
-
-            dynamic_sidebar("social-icons-header");
-
-        }
-
-        ?>  
+               
 
 				 <div class="header-menu-wrapper">
-
+  
                        <?php                        
 
                         if ( has_nav_menu( 'header-menu' ) ) {                                                

@@ -468,27 +468,7 @@ function bootstrapwp_widgets_init() {
 
 
 
-	register_sidebar(
 
-            array(
-
-                'name' => __('Social Icons Header', 'podemoswp'),
-
-                'id' => 'social-icons-header',
-
-                'description' => __('Social Icons Header', 'podemoswp'),
-
-                'before_widget' => '<div class="mks_social_widget">',
-
-                'after_widget' => '</div>',
-
-                'before_title' => '',
-
-                'after_title' => ''
-
-            )
-
-    );
 
         
 

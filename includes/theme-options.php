@@ -36,6 +36,22 @@ function podemos_theme_customizer( $wp_customize ) {
 
 
 
+//Añadir sección de página principal
+
+    $wp_customize->add_section( 'podemos_portada_section' , array(
+    'title'       => __( 'P&aacute;gina principal', 'podemoswp' ),
+    'priority'    => 31,
+    'description' => 'Configura la p&aacute;gina principal',
+));
+
+//Añadir sección de redes sociales en cabecera
+
+    $wp_customize->add_section( 'podemos_social_section' , array(
+    'title'       => __( 'Botones sociales', 'podemoswp' ),
+    'priority'    => 32,
+    'description' => 'Configura tus redes sociales',
+));
+
 //Home type
 
  $wp_customize->add_setting(
@@ -57,9 +73,23 @@ function podemos_theme_customizer( $wp_customize ) {
         ),
     ));
 
+	
+//Activar botones sociales
+
+$wp_customize->add_setting(
+    'activar_sociales'
+	);
+	$wp_customize->add_control(
+    'activar_sociales',
+    array(
+        'type' => 'checkbox',
+        'label' => 'Activar Botones Sociales',
+        'section' => 'podemos_social_section',
+		'priority'    => 1,
+    )
+);	
+
 //Activar Portada
-
-
 
 $wp_customize->add_setting(
     'activar_portada'
@@ -137,12 +167,6 @@ $wp_customize->add_setting(
 
 //Imagen Portada
 
-    $wp_customize->add_section( 'podemos_portada_section' , array(
-    'title'       => __( 'P&aacute;gina principal', 'podemoswp' ),
-    'priority'    => 31,
-    'description' => 'Configura la p&aacute;gina principal',
-));
-
 $wp_customize->add_setting( 'portada_podemos' );
 $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'portada_podemos', array(
     'label'    => __( 'Sube una imagen a la portada', 'podemoswp' ),
@@ -165,6 +189,33 @@ class Podemos_Textarea_Control extends WP_Customize_Control {
 
 
 <?php } } 
+
+
+//Social Facebook URL
+
+$wp_customize->add_setting(
+    'social_facebook_url'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'social_facebook_url', array(
+	'label' => 'Facebook URL',
+	'section' => 'podemos_social_section',
+	'priority'    => 2,
+	'settings' => 'social_facebook_url',
+)));
+
+
+//Social Twitter URL
+
+$wp_customize->add_setting(
+    'social_twitter_url'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'social_twitter_url', array(
+	'label' => 'Twitter URL',
+	'section' => 'podemos_social_section',
+	'priority'    => 3,
+	'settings' => 'social_twitter_url',
+)));
+
 
 
 //Homebox1 video URL

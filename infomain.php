@@ -16,7 +16,7 @@
 </div><!--/Boxcont -->
 <?php else : ?> 
 <div class="boxcont">
-
+<h2><?php echo get_theme_mod( 'box1_title' ) ?>  </h2>
 
 <p> <?php echo get_theme_mod( 'box1_text' ) ?></p>
 
