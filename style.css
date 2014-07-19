@@ -218,6 +218,9 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
 	background-color: #954e99;
 }
 
+div.col-9.entire p, div.homecolor, div.homebox1 p  {
+font-size:16px!important;
+}
 
 /* Content Info */ 
 
@@ -410,6 +413,26 @@ font-weight: normal;
 }
 
 
+
+/* Redes Sociales en cabecera */ 
+
+div.redes-sociales {
+
+height:40px;
+position:absolute;
+top:0px;
+right:10px;
+width:90px;
+
+
+}
+
+div.redes-sociales a {
+margin-left:10px;
+}
+
+
+
 /* Sidebars */ 
 
 .sidebar-posts .textwidget, .sidebar-page .textwidget {
@@ -425,6 +448,16 @@ min-height:500px!important;
 }
 
 /* Contradiciendo Bootstrap Responsive */ 
+
+.read-more, a.read-more {
+background:#97c2b8!important;
+background-color:#97c2b8!important;
+}
+
+.read-more:hover, a.read-more:hover {
+background:#269283!important;
+background-color:#269283!important;
+}
 
 div.top-main-menu.fixed {
 position:relative!important;
@@ -490,8 +523,13 @@ width: 67%;
 
 @media (max-width: 1124px) {
 
+.header-menu-wrapper {
+display:none!important;
+}
+
+
 .feat_box, #feat_box {
-display:none;
+display:none!important;
 }
 
 .seesfuma {
@@ -509,9 +547,11 @@ height:auto!important;
 }
 
 
-div.homebox1 {
-min-height:auto!important;
+div.homebox1, div.sidebar-wrapper.homebox1, div.col-3.sidebar-wrapper.homebox1  {
+min-height:240px!important;
 width:100%!important;
+height:auto!important;
+padding-bottom:100px;
 }
 
 div.col-9.entire {
@@ -602,10 +642,13 @@ width: 100%;
 }
 .header-menu-wrapper {
 	color: #A0A4A9;
-	float: left;
+	position:absolute;
+	bottom:0px;
+	right:100px;
 	line-height: 40px;
 	margin: 0px 15px 0px 0px;
 	text-transform: uppercase;
+	
 }
 #top-header ul, ol {
 	margin-bottom: 0px;
