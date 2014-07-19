@@ -4,7 +4,7 @@
  * Theme Description: Template para Podemos
  * Author: Gregor Hartmaier (Webdesign4Pros), David Varela (Lycaweb)
  * Author URI: http://webdesign4pros.com/
- * Version: 1.46
+ * Version: 1.47
  * Tags: twitter, bootstrap, podemos, círculos
  * License: license.txt
  * License URI:
@@ -440,7 +440,7 @@ padding-left: 0px!important;
 }
 
 .sidebar-page {
-margin-top: 100px;
+margin-top: 20px;
 }
 
 div.sidebar-wrapper, div.col-3.sidebar-wrapper {
@@ -452,11 +452,13 @@ min-height:500px!important;
 .read-more, a.read-more {
 background:#97c2b8!important;
 background-color:#97c2b8!important;
+border-color: #269283!important;
 }
 
 .read-more:hover, a.read-more:hover {
 background:#269283!important;
 background-color:#269283!important;
+border-color: #97c2b8!important;
 }
 
 div.top-main-menu.fixed {
@@ -690,12 +692,28 @@ div.brand {
 #site-title {
 	font-size: 30px;
 }
+
+/*Basic widgets */
+
+.form-group {
+width:100%;
+}
+
+#search.form-control {
+width:100%;
+}
+.form-group button {
+
+width:90%;
+margin-left:5%
+}
+
 /*Header Menu */
 
 .top-main-menu {
 	padding: 0px 0px 0px 0px;
 	margin: 0px 0px 0px 0px;
-	min-height: 65px !important;
+	min-height: 64px !important;
 	border-bottom: #3A243A 5px solid;
 	background-color: #FFF
 }
@@ -838,7 +856,7 @@ div.brand {
 
 
 div.sidebar-wrapper {
-	padding: 20px 20px 20px 40px;
+	padding: 20px 40px 20px 40px;
 	padding-bottom: 30px;
 	margin: 0px 0px 0px 0px !important;
 	background-color: #EAEAEA;

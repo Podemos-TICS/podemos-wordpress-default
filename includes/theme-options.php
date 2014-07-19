@@ -74,6 +74,27 @@ function podemos_theme_customizer( $wp_customize ) {
     ));
 
 	
+//Blog sidebar
+
+ $wp_customize->add_setting(
+    'blog_sidebar', array (
+	'default'        => 'right',
+	));
+
+ $wp_customize->add_control('blog_sidebar', array(
+        'label'      => __('Blog sidebar', 'podemoswp'),
+        'section'    => 'podemos_portada_section',
+        'settings'   => 'blog_sidebar',
+		
+		'priority'    => 11,
+        'type'       => 'radio',
+        'choices'    => array(
+            'left' => 'Izquierda',
+            'right' => 'Derecha',
+            
+        ),
+    ));
+	
 //Activar botones sociales
 
 $wp_customize->add_setting(

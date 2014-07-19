@@ -5,14 +5,16 @@
 
 
 
-div.main-content.rightsid {
+<?php if( get_theme_mod( 'blog_sidebar' ) == 'right') : ?>
+body, <?php endif; ?>div.main-content.rightsid {
 background: url(<?php echo get_template_directory_uri();?>/assets/rightsidback.jpg) 0% 0%/100% 100% !important;
 
 
 }
 
-body, div.main-content.leftsid {
-background: url(http://info.pinternet.es/wp-content/themes/podemos-wordpress-default-master/assets/leftsidback.jpg) 0% 0%/100% 100% !important;
+<?php if( get_theme_mod( 'blog_sidebar' ) == 'left') : ?>
+body, <?php endif; ?>div.main-content.leftsid {
+background: url(<?php echo get_template_directory_uri();?>/assets/leftsidback.jpg) 0% 0%/100% 100% !important;
 
 }
 
