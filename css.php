@@ -165,7 +165,7 @@ font-size:20px!important;
 
 
 
-/* Aparición de feat_box */
+
 <script>
 var manzana = jQuery.noConflict();
 manzana(document).ready(function(){
