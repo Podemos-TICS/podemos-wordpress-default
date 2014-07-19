@@ -20,8 +20,9 @@
 
 <p> <?php echo get_theme_mod( 'box1_text' ) ?></p>
 
-   <?php if( get_theme_mod( 'activar_link_homebox1' ) == '1') : ?>	
 </div><!--/Boxcont --> 
+   <?php if( get_theme_mod( 'activar_link_homebox1' ) == '1') : ?>	
+
  <div class="homeboxlinkcont">  
  <a class="homebox_link" href="<?php echo get_theme_mod( 'box1_url_link' ) ?>"><?php echo get_theme_mod( 'box1_text_link' ) ?></a>  
  </div>  
