@@ -4,7 +4,7 @@
  * Theme Description: Template para Podemos
  * Author: Gregor Hartmaier (Webdesign4Pros), David Varela (Lycaweb)
  * Author URI: http://webdesign4pros.com/
- * Version: 1.30
+ * Version: 1.31
  * Tags: twitter, bootstrap, podemos, círculos
  * License: license.txt
  * License URI:
@@ -489,6 +489,10 @@ width: 67%;
 }
 
 @media (max-width: 1124px) {
+
+.feat_box, #feat_box {
+display:none;
+}
 
 .seesfuma {
 display:none!important;

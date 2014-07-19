@@ -26,6 +26,65 @@ background: #97c2b8 url(<?php echo get_template_directory_uri();?>/assets/circul
 
 /* Div Portada */
 
+
+.feat_box {
+position: absolute;
+right: 8px;
+height: auto;
+width: 270px;
+top: 20px;
+z-index: 15;
+background:  url(<?php echo get_template_directory_uri();?>/assets/fondo-c.png);
+-webkit-box-shadow: 0px 0px 3px 0 #60676F;
+box-shadow: 0px 0px 3px 0 #60676F;
+border:0px solid #000;
+border-radius:3px;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+}
+
+.feat_box_tab {
+
+height: 15px;
+width: 270px;
+}
+
+.feat_box_txt {
+height: auto;
+width: 270px;
+
+}
+
+.feat_box_txt p {
+font: 1.6em/1.1em "Alegreya Sans SC", Arial, Helvetica, sans-serif;
+color: #EAEAEA;
+text-transform: lowercase;
+position: relative;
+padding: 5px 15px 0px;
+font-size:20px;
+}
+
+.feat_box a {
+-webkit-border-radius: 2px;
+border-radius: 2px;
+font-size:20px!important;
+width: 240px;
+display: block;
+background: #294946;
+font: 1.8em/1.944em "Alegreya Sans SC", Arial, Helvetica, sans-serif;
+color: #EAEAEA;
+text-transform: lowercase;
+margin: 0px auto;
+text-align: center;
+}
+
+.feat_box_link {
+position: relative;
+width: 270px;
+padding: 15px 0px;
+}
+
+
 .portada_top {
 height: 450px;
 width: 100%;
@@ -103,3 +162,30 @@ text-align: center;
 font-size:20px!important;
 }
 </style>
+
+
+
+/* Aparición de feat_box */
+<script>
+var manzana = jQuery.noConflict();
+manzana(document).ready(function(){
+    	   
+	manzana("#feat_box").css({"visibility":"hidden"});
+    manzana("#feat_box").css({"margin-right":"-96%"
+	});
+	
+    manzana("#feat_box").delay("50").show(0);
+	function showtheamazingwelcome() {  
+		manzana("#feat_box").css({"visibility":"visible"});		
+		manzana("#feat_box").css({"visibility":"visible"});
+   		manzana("#feat_box").animate({"margin-right":
+'8px'
+	}, 1000
+);}
+	 
+setTimeout(showtheamazingwelcome, "50")
+	  
+  
+		
+});
+</script>

@@ -389,6 +389,31 @@ $wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'box5_url
 	'settings' => 'box5_url_link',
 )));
 
+//Texto link featured
+
+$wp_customize->add_setting(
+    'featured_link_text'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'featured_link_text', array(
+	'label' => 'Featured link text',
+	'section' => 'podemos_portada_section',
+	'priority'    => 8,
+	'settings' => 'featured_link_text',
+)));
+
+//URL link featured
+
+$wp_customize->add_setting(
+    'featured_link_url'
+	);
+$wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'featured_link_url', array(
+	'label' => 'Featured link URL',
+	'section' => 'podemos_portada_section',
+	'priority'    => 9,
+	'settings' => 'featured_link_url',
+)));
+
+
 //Título Portada
 
 $wp_customize->add_setting('titulo_de_portada', array('default' => '',));
@@ -409,7 +434,7 @@ $wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'texto_li
 	'settings' => 'texto_link_portada',
 )));
 
-//Texto link Portada
+//URL link Portada
 
 $wp_customize->add_setting('url_link_portada', array('default' => '',));
 $wp_customize->add_control(new Podemos_Textarea_Control($wp_customize, 'url_link_portada', array(
@@ -434,6 +459,16 @@ class Gran_Textarea_Control extends WP_Customize_Control {
 <?php } }
 
 
+
+//Texto Featured
+
+$wp_customize->add_setting('texto_featured', array('default' => '',));
+$wp_customize->add_control(new Gran_Textarea_Control($wp_customize, 'texto_featured', array(
+	'label' => 'Texto Featured',
+	'section' => 'podemos_portada_section',
+	'priority'    => 7,
+	'settings' => 'texto_featured',
+)));
 
 //Texto Portada
 

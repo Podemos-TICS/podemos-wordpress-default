@@ -1,4 +1,15 @@
   <div class="portada_top">
+  
+  
+  <div class="feat_box" id="feat_box"> 
+  <div class="feat_box_tab"></div>
+  <div class="feat_box_txt">
+  <p><?php echo get_theme_mod( 'texto_featured' ); ?></p>
+  </div>
+  <div class="feat_box_link">
+  <a href="<?php echo get_theme_mod( 'featured_link_url' ); ?>"><?php echo get_theme_mod( 'featured_link_text' ); ?></a>
+  </div>
+  </div>
        
 		<div class="portada_presentation">
 
