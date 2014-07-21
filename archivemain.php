@@ -48,7 +48,7 @@
 
                 printf(
 
-                        __('Archivos de la categorías: %s', 'podemos'), '<span>' . single_cat_title('', false) . '</span>'
+                        __('Archivos de la categor&iacute;as: %s', 'podemos'), '<span>' . single_cat_title('', false) . '</span>'
 
                 );
 

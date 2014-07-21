@@ -31,9 +31,16 @@
 
 
 </div><!-- container -->
+
+<?php if( get_theme_mod( 'blog_info' ) == 'blog') : ?>	
 <?php if( get_theme_mod( 'blog_sidebar' ) == 'left') : 
  get_footer('left-sidebar'); 
 else:
  get_footer(); 
  endif;
  ?>
+ 
+ <?php else:  
+get_footer('left-sidebar');   
+endif; ?>
+ 

@@ -26,8 +26,24 @@ background: #97c2b8 url(<?php echo get_template_directory_uri();?>/assets/circul
 
 }
 
-/* Div Portada */
 
+/* Sidebar */
+<?php if( get_theme_mod( 'blog_sidebar' ) == 'left') : ?>
+.sidebar-page {
+text-align:right;
+
+}
+<?php endif; ?>
+
+.sidebar-page li {
+list-style:none!important;
+
+}
+
+
+/* Div Portada */
+<?php if( get_theme_mod( 'blog_info' ) == 'blog') : ?>	
+<?php if( get_theme_mod( 'blog_sidebar' ) == 'left') : ?>
 
 .feat_box {
 position: absolute;
@@ -44,6 +60,42 @@ border-radius:3px;
 -moz-border-radius:3px;
 -webkit-border-radius:3px;
 }
+<?php else: ?>
+.feat_box {
+position: absolute;
+left: 8px;
+height: auto;
+width: 270px;
+top: 20px;
+z-index: 15;
+background:  url(<?php echo get_template_directory_uri();?>/assets/fondo-c.png);
+-webkit-box-shadow: 0px 0px 3px 0 #60676F;
+box-shadow: 0px 0px 3px 0 #60676F;
+border:0px solid #000;
+border-radius:3px;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+}
+<?php endif; ?>
+<?php else: ?>
+.feat_box {
+position: absolute;
+right: 8px;
+height: auto;
+width: 270px;
+top: 20px;
+z-index: 15;
+background:  url(<?php echo get_template_directory_uri();?>/assets/fondo-c.png);
+-webkit-box-shadow: 0px 0px 3px 0 #60676F;
+box-shadow: 0px 0px 3px 0 #60676F;
+border:0px solid #000;
+border-radius:3px;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+}
+<?php endif; ?>
+
+
 
 .feat_box_tab {
 
@@ -87,6 +139,7 @@ padding: 15px 0px;
 }
 
 
+ 
 .portada_top {
 height: 450px;
 width: 100%;
@@ -99,6 +152,35 @@ background: #A0A4A9 url(<?php echo get_theme_mod( 'portada_podemos' ); ?>) no-re
 background-size: cover;
 }
 
+<?php if( get_theme_mod( 'blog_info' ) == 'blog') : ?>	
+<?php if( get_theme_mod( 'blog_sidebar' ) == 'left') : ?>
+.portada_presentation {
+overflow: hidden;
+position: relative;
+width: 37%;
+left: 0px;
+top: 0px;
+background: url(<?php echo get_template_directory_uri();?>/assets/fondo-c.png);
+height: 450px;
+}
+
+<?php else: ?>
+
+.portada_presentation {
+overflow: hidden;
+position: relative;
+width: 37%;
+float:right;
+background: url(<?php echo get_template_directory_uri();?>/assets/fondo-c.png);
+height: 450px;
+}
+
+
+<?php endif; ?>
+
+
+
+<?php else: ?>
 
 .portada_presentation {
 overflow: hidden;
@@ -109,6 +191,12 @@ top: 0px;
 background: url(<?php echo get_template_directory_uri();?>/assets/fondo-c.png);
 height: 450px;
 }
+
+<?php endif; ?>
+
+
+
+
 
 .portada_box {
 padding: 30px 40px;
@@ -171,7 +259,8 @@ font-size:20px!important;
 <script>
 var manzana = jQuery.noConflict();
 manzana(document).ready(function(){
-    	   
+    <?php if( get_theme_mod( 'blog_info' ) == 'blog') : ?>
+<?php if( get_theme_mod( 'blog_sidebar' ) == 'left') : ?>	
 	manzana("#feat_box").css({"visibility":"hidden"});
     manzana("#feat_box").css({"margin-right":"-96%"
 	});
@@ -182,6 +271,32 @@ manzana(document).ready(function(){
 		manzana("#feat_box").css({"visibility":"visible"});
    		manzana("#feat_box").animate({"margin-right":
 '8px'
+<?php else: ?>
+	manzana("#feat_box").css({"visibility":"hidden"});
+    manzana("#feat_box").css({"margin-left":"-96%"
+	});
+	
+    manzana("#feat_box").delay("50").show(0);
+	function showtheamazingwelcome() {  
+		manzana("#feat_box").css({"visibility":"visible"});		
+		manzana("#feat_box").css({"visibility":"visible"});
+   		manzana("#feat_box").animate({"margin-left":
+'8px'
+
+<?php endif; ?>
+<?php else: ?>
+	manzana("#feat_box").css({"visibility":"hidden"});
+    manzana("#feat_box").css({"margin-right":"-96%"
+	});
+	
+    manzana("#feat_box").delay("50").show(0);
+	function showtheamazingwelcome() {  
+		manzana("#feat_box").css({"visibility":"visible"});		
+		manzana("#feat_box").css({"visibility":"visible"});
+   		manzana("#feat_box").animate({"margin-right":
+'8px'
+<?php endif; ?>
+
 	}, 1000
 );}
 	 
