@@ -14,7 +14,40 @@
 
  */
 
+add_action('admin_head', 'my_custom_fonts');
 
+function my_custom_fonts() {
+  echo '<style>
+
+   div[id*="blogwidget"] .widget-title, div[id*="headwidget"] .widget-title {background-color:#954e99;color:#fff;text-shadow: 1px 1px 1px #000;}
+ 
+#adminmenu, #adminmenu .wp-submenu, #adminmenuback, #adminmenuwrap {
+
+background-color: #612d62;
+}
+
+#adminmenu .wp-has-current-submenu .wp-submenu, 
+#adminmenu .wp-has-current-submenu .wp-submenu.sub-open,
+ #adminmenu .wp-has-current-submenu.opensub .wp-submenu, 
+ #adminmenu a.wp-has-current-submenu:focus+.wp-submenu,
+ .no-js li.wp-has-current-submenu:hover .wp-submenu {
+ background-color:#954e99;
+ 
+ }
+ 
+ #adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head,
+ #adminmenu .wp-menu-arrow, #adminmenu .wp-menu-arrow div, #adminmenu li.current a.menu-top, 
+ #adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
+ .folded #adminmenu li.current.menu-top, .folded #adminmenu li.wp-has-current-submenu {
+background: #000!important;
+color:#c3a6cf!important;
+
+}
+ 
+  </style>';
+}
+
+get_template_part('includes/widgets/blogwidget');
 
 /**
 
@@ -149,16 +182,22 @@ add_action('after_setup_theme', 'podemoswp_theme_setup');
  *
 
  */
+ 
+ add_image_size('imagen-grande', 800, 360, true);
+	
+	add_image_size('imagen-mediana', 400, 300, true);
+	
+	add_image_size('imagen-peque', 300, 200, true);
 
 function bootstrapwp_images() {
-
-
 
     set_post_thumbnail_size(260, 180); // 260px wide x 180px high
 
     add_image_size('bootstrap-small', 300, 200); // 300px wide x 200px high
 
     add_image_size('bootstrap-medium', 360, 270); // 360px wide by 270px high
+	
+
 
 }
 
