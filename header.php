@@ -234,6 +234,33 @@
                 }
 
                 ?>
+				<div class="apareces">
+				 <?php                        
+
+                        if ( has_nav_menu( 'header-menu' ) ) {                                                
+
+                            wp_nav_menu(array(
+
+                                'menu' => '',
+
+                                'theme_location' => 'header-menu',
+
+                                'depth' => 2,
+
+                                'container' => false,
+
+                                'menu_class' => 'nav navbar-nav',
+
+                                'fallback_cb' => 'wp_page_menu',
+
+                                'walker' => new wp_bootstrap_navwalker())
+
+                            );                            
+
+                        }
+
+                        ?>
+					</div>	
 
             </div><!-- /.navbar-collapse -->
 
