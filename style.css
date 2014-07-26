@@ -4,7 +4,7 @@
  * Theme Description: Template para Podemos
  * Author: Gregor Hartmaier (Webdesign4Pros), David Varela (Lycaweb)
  * Author URI: http://webdesign4pros.com/
- * Version: 1.51
+ * Version: 1.52
  * Tags: twitter, bootstrap, podemos, círculos
  * License: license.txt
  * License URI:
@@ -221,6 +221,7 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
 div.col-9.entire p, div.homecolor, div.homebox1 p  {
 font-size:16px!important;
 }
+
 
 
 /* Blog Widget */ 
@@ -486,7 +487,7 @@ max-height:1000px!important;
 .read-more, a.read-more {
 background:#97c2b8!important;
 background-color:#97c2b8!important;
-border-color: #fff!important;
+border-color: transparent!important;
 }
 
 .read-more:hover, a.read-more:hover {
@@ -605,6 +606,15 @@ height:auto!important;
 @media (max-width: 768px) {
 
 
+#search.form-control {
+width: 100%!important;
+}
+
+.form-group button {
+width: 50%!important;
+ float:none!important; 
+}
+
 .navbar ul li ul {
 display:block;
 padding:0px!important;
@@ -649,6 +659,13 @@ display:none!important;
 @media (max-width: 992px) {
 
 
+div.footer .col-md-3 {
+padding: 20px 0px 20px 0px!important;
+
+}
+.footer .col-md-3 ul {
+padding-left:0px!important;
+}
 
 .homeboxlinkcont, a.homebox_link {
 position:relative!important;
@@ -775,17 +792,16 @@ div.brand {
 /*Basic widgets */
 
 .form-group {
-width:100%;
+width:auto;
 }
 
 #search.form-control {
-width:100%;
+width:160px
 }
 .form-group button {
 
-width:90%;
-margin-left:5%;
-margin-right:5%;
+width:70px;
+float:right;
 }
 
 /*Header Menu */
