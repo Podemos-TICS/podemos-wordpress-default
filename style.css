@@ -13,7 +13,7 @@
 /* Apply bootstrap styles */
 
  @import url('bootstrap/css/bootstrap.min.css');
- @import url(http://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Anaheim);
+ @import url(http://fonts.googleapis.com/css?family=Alegreya+Sans+SC);
  @import url(http://fonts.googleapis.com/css?family=Anaheim);
 @font-face {
 	font-family: 'Alegreya Sans SC';
