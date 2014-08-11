@@ -20,7 +20,7 @@ if ( !class_exists('ThemeUpdateChecker') ):
  */
 class ThemeUpdateChecker {
 	public $theme = 'podemos-wordpress-default-master';              //The theme associated with this update checker instance.
-	public $metadataUrl = 'http://info.pinternet.es/actualizacionespodemos/wp-podemos.json';        //The URL of the theme's metadata file.
+	public $metadataUrl = 'https://github.com/Podemos-TICS/podemos-wordpress-default/blob/master/wp-podemos.json';        //The URL of the theme's metadata file.
 	public $enableAutomaticChecking = true; //Enable/disable automatic update checks.
 	
 	protected $optionName = '';      //Where to store update info.
