@@ -74,7 +74,7 @@
 
                         } else {
 
-                           echo the_content('<span class="read-more">Weiterlesen</span>', 'podemoswp');
+                           echo the_content('<span class="read-more">Leer más</span>', 'podemoswp');
 
                         }
 
